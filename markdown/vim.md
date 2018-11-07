@@ -38,12 +38,6 @@
   note:
   ex是vi之前的行编辑器，是对ed的改进
 # normal mode
-  - 操作模式
-    + {operator}{number}{motion}
-  - operator
-    + 删除 d
-    + 修改 c
-    + 复制 y
   - 移动光标
     + h,j,k,l
     + 行首0, 行尾$
@@ -51,36 +45,65 @@
     + gg文件头, G文件尾
     + 滚动 <c-e>, <c-y>
     + 翻页 <c-f>, <c-b>, <c-d>, <c-u>
+  - 操作模式
+    + {operator}{number}{motion}
+  - operator
+    + 删除 d
+    + 修改 c
+    + 复制 y
+  - 搜索
+    + 行内搜索 f/F
+    + /|?
   - 文本对象
     用法: daw/diw, 
     a, 包含space. i, 不包含space
     + w: 单词
     + p: 段落
     + s: 句子
-    + "/'/`/(/[/{/<
+    + t: html tag
+    + "|'|`|(|[|{|<
     + 文本对象扩展
       + l: 行
       + a: 方法参数
       + i: indent
       + e: 整个文件
+      + e.g.
+        onoremap in( :<c-u>normal! f(vi(<cr>
   note:
   重复的操作符表示对当前行操作，dd/cc/yy
 # visual mode
-    - 先选中再通过operator操作，选中文本
+    - 区别: 先选中再通过operator操作，选中文本
     - 三种可视模式
       + v: 面向字符的可视模式
       + V: 面向行的可视模式
       + <C-v>: 面向列的可视模式
+  note:
+  o: 切换选区的活动端
+  gv: 重选上次高亮选区
+  只要可能最好用操作符命令，而不是可视模式
 # cmdline mode 
   - ex命令
-    + :q/:q!
-    + :w/:wa
-    + :substitute
+    + :q/:q!/:w/:wa
+    + 快捷键
+      * Ctrl-w/Ctrl-e/Ctrl-u
+      * cnoremap
+    + 历史记录 q:
+    + 命令介绍
+      * :normal 在指定范围上执行普通模式命令
+      * :substitute
   - 搜索
     + /正向查找
     + ?反向查找
-  - filter
+    + 历史记录 q/
+  - filter 获取文本，传送到外部程序处理，再输出
     + sort
+  note:
+  搜索
+  1. 正则magic, nomagic, very magic
+  指定范围
+  1. 可视模式选择
+  2. :{start},{end} e.g.  :.,5p  .代表当前行，$代表行尾，%代表整个文件
+# terminal mode
 
 
 

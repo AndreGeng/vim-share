@@ -1,7 +1,21 @@
-// 面向列的可视模式
+// operator pending mode
+var a = (1 + 2) + 'haha'
+
+// normal, 面向列的可视模式
 var foo = 1
 var bar = 2
 var foobar = foo + bar
+
+// filter sort
+1
+2
+3
+4
+5
+6
+7
+8
+9
 
 // 只要可能最好用操作符命令，而不是可视模式
 <a class="test" href="">one</a>
@@ -19,7 +33,6 @@ jane,2oe,jane@example.com
 hane,3oe,jane@example.com
 zane,1oe,jane@example.com
 
- 
 {
   foo: '123',
   bar: '456',
@@ -53,7 +66,6 @@ foo
 foos
 
 
-This string contains a 'quoted' word.
 This string contains 'two' quoted 'words.'
 This 'string doesn't make things easy.'
 
