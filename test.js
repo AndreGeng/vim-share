@@ -45,5 +45,11 @@ var foo = a+','+b+','+c+','+d+','+e;
 // comment
 11. eleven
 
+var shopList = [{
+  shopId: 0,
+  name: "shop 0",
+}];
+
+
 
 

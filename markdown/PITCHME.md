@@ -46,6 +46,7 @@
     + 鼠标
   note:
   ex是vi之前的行编辑器，是对ed的改进
+  @: 重复ex命令
 # normal mode
   - 移动光标
     + h,j,k,l
@@ -133,7 +134,8 @@
   无名寄存器 "
   复制专用寄存器 0
   系统剪贴版 +
-#
+  表达式寄存器
+# 
 
 
 
@@ -155,86 +157,23 @@
 
 
 
-# 功能
-  ## 模式编辑(:h vim-modes)
-   - insert mode
-   - normal mode
-    + {operator}{number}{motion}
-      d2l, d2h, d$
-    + operator
-      d: delete
-      c: change
-      y: yank 复制
-      重复的操作符表示对当前行操作，dd/cc/yy
-      自定义操作符（：h map-operator）
-    + motion
-      l: letter
-      w: word
-      p: paragraph
-      text objects
-      自定义动作命令(:h omap-info)
-   - visual mode
-    + 简介（可视模式与其它编辑器的不同）
-    + 3种可视模式
-      v: 面向字符的可视模式
-      V: 面向行的可视模式
-      <C-v>: 面向列的可视模式
 
-      o: 切换选区的活动端
-      gv: 重选上次高亮选区
 
-    + 选择模式（<C-g>）, ps: 没怎么用过感觉没啥用
-    + 只要可能最好用操作符命令，而不是可视模式
-   - cmdline mode
-     先有 ed，ed 为 ex 之父，ex 为 vi 之父，而 vi为 Vim 之父。
-     + :split, :bprev/:bnext, :substitute
-     + ex模式能操作的范围更大，可以在不移动光标的情况下，操作多行数据。
-     + 代码间跳转
-       :1
-       :p
-       :3d // 跳转至第三行并删除
-       :{start},{end} e.g.  :.,5p  .代表当前行，$代表行尾，%代表整个文件
-       :%s/Hello/hello/
-     + 高亮区指定范围。选中按:, 可以用于部分内容substitute
-     + 用偏移对地址修正， :.,.+3p
-     + normal 在指定范围上执行普通模式命令
-     + @:  重复命令行命令
-     + q: 打开命令行窗口, 输入命令行时<C-f>切换到命令行窗口
-     + !{cmd} 运行外部命令
-     适合对一个范围内的内容进行编辑。
-   - ex mode
-    Q进入，visual退出
-    一般用来做批处理，从外部用-E -s参数调用
-   - Select mode
-   - 
-  ## normal mode
-   - 不用鼠标
-   - 不用方向键
-  ## visual mode
-# vim魔法
-  ## text objects and motions
-    dw, dp, db, dB
-    di', di(, dit
-  ## dot command
-    - 能重复哪些命令
-      + 普通模式下的一次操作 (x, dd, >>)
-      + 进入普通模式那一刻至退出普通模式
-    - 
-  ## 宏
-    - q{register}, q开始/结束录制, @a 执行宏, @@重复上次执行的宏
-    - 10@q, 当动作指令失败时宏将终止执行
-    - 串与并行执行
-    - 给宏追加命令，qQ
-    - 编辑宏的内容
-  ## 模式
-    - magic, (default) 特殊含义: 点，星号，方括号
-    - nomagic, 比较像 \V(原义)开启 特殊含义：^, $
-    - very magic, (与我们认知的正则比较像) \v开启 特殊含义：除_, 数字，字母
-    - 单词定界符
-  ## 查找
-    - 
-  ## substitute
-  ## global
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 文件
  - :args
   + :args index.html app.js
@@ -260,8 +199,3 @@
 # plugin
   + vim, ~/.vim/plugin, neovim, ~/.local/share/nvim/site/plugin
   
-# 自动补全
- - c-n, c-p 打开补全菜单
- - c-e关闭补全菜单
-# package & plugin
-
