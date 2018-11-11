@@ -1,6 +1,7 @@
 # Agenda
   - 为什么选择vim
   - vim现状
+  - 编辑窗口简介
   - 模式编辑
   - dot与宏
   - 插件简介
@@ -21,6 +22,14 @@
     + 新的插件机制
   note:
   大体上开发活跃，项目较健康，值的投资学一下。
+# 编辑窗口简介
+  - buffer
+  - window
+  - tab
+  note:
+  buffer文件在内存中的表示
+  window是buffer的窗口/viewport, 一个buffer可以被多个window view
+  tab是一种管理window的方式
 # 模式编辑
   - insert mode
   - normal mode
@@ -104,7 +113,27 @@
   1. 可视模式选择
   2. :{start},{end} e.g.  :.,5p  .代表当前行，$代表行尾，%代表整个文件
 # terminal mode
-
+  - :terminal
+  - go to normal mode
+    + <c-\><c-n>
+  - terminal buffer
+# dot
+  - 能重复哪些命令
+    + 普通模式下的一次操作 (x, dd, >>)
+    + 进入普通模式那一刻至退出普通模式
+  - 试着让命令可被重复
+  - dot + normal
+# macro
+  - q{register}, q开始/结束录制, @a 执行宏, @@重复上次执行的宏
+  - 重放宏，10@q, 当动作指令失败时宏将终止执行
+  - 串与并行执行, :.,.+2normal @q
+  - 给宏追加命令，qq vs qQ
+  - 编辑宏的内容, 寄存器
+  note:
+  无名寄存器 "
+  复制专用寄存器 0
+  系统剪贴版 +
+#
 
 
 
