@@ -210,28 +210,36 @@
     * autocmd/augroup
   - 编写插件
     + vimscript
+    <!--
       * 变量
-      <!--
-		1. let a=0
-		2. 选项 let &textwidth = 100
-		3. 本地选项 let &l:number = 1
-		4. 作为变量的寄存器 let &a = 1
-		5. 变量类型：Number/Float/String/列表  -->
+        1. let a=0
+        2. 选项 let &textwidth = 100
+        3. 本地选项 let &l:number = 1
+        4. 作为变量的寄存器 let &a = 1
+        5. 变量类型：Number/Float/String/列表
 	  * 变量作用域
-	  <!--
-		1. 局部变量（字母冒号开头） let b:hello = "world"  -->
+        1. 局部变量（字母冒号开头） let b:hello = "world"
 	  * 流程控制
 	  * 比较 （== ==？ ==#）
 	  * 函数
-	  <!--
-		1. 函数名首字母大写
-		2. 函数默认返回值为0
-		3. 调用方式， call Foo(), 或者用在表达式中：echom Foo()  
-		4. 函数参数 a:name
-		5. 可变参数 a:000
-		6. 函数参数不能赋值  
-		7. 内置函数-->
-      * execute, normal  
+        1. 函数名首字母大写
+        2. 函数默认返回值为0
+        3. 调用方式， call Foo(), 或者用在表达式中：echom Foo()  
+        4. 函数参数 a:name
+        5. 可变参数 a:000
+        6. 函数参数不能赋值  
+        7. 内置函数-->
+    + 插件结构
+    <!--
+      * colors
+      * plugin
+      * ftdetect -- filetype相关的autocmd
+      * ftplugin -- filetype相关
+      * indent -- filetype indent相关
+      * compiler
+      * after
+      * autoload -- 延迟插件
+      * doc -->
 
 
 
