@@ -216,11 +216,11 @@
 		2. 选项 let &textwidth = 100
 		3. 本地选项 let &l:number = 1
 		4. 作为变量的寄存器 let &a = 1
-		5. 变量类型：Number/Float/String  -->
+		5. 变量类型：Number/Float/String/列表  -->
 	  * 变量作用域
 	  <!--
 		1. 局部变量（字母冒号开头） let b:hello = "world"  -->
-	  * 条件控制
+	  * 流程控制
 	  * 比较 （== ==？ ==#）
 	  * 函数
 	  <!--
@@ -231,7 +231,7 @@
 		5. 可变参数 a:000
 		6. 函数参数不能赋值  
 		7. 内置函数-->
-        
+      * execute, normal  
 
 
 
