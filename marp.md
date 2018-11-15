@@ -208,6 +208,7 @@
   - 配置
     * mapleader
     * autocmd/augroup
+    * nnoremap
   - 编写插件
     + vimscript
     <!--
@@ -240,6 +241,7 @@
       * after
       * autoload -- 延迟插件
       * doc -->
+    + node插件(nvim only)
 
 
 
