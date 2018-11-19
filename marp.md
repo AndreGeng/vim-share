@@ -35,6 +35,13 @@
   -->
 
   ---
+  
+  # 安装
+  brew install vim --with-override-system-vi
+  or
+  brew install neovim
+  
+  ---
 
 # 编辑窗口简介
   - buffer
@@ -139,7 +146,7 @@
   - ex命令
     + :q/:q!/:w/:wa
     + 快捷键
-      * Ctrl-w/Ctrl-e/Ctrl-u
+      * Ctrl-w/Ctrl-a/Ctrl-e/Ctrl-u/Ctrl-h/Ctrl-D/Alt-b/Alt-f
       * cnoremap
     + 历史记录 q:
     + 命令介绍
@@ -206,9 +213,10 @@
 # plugin
   - plugin-manager, vim-plug
   - 配置
-    * mapleader
-    * autocmd/augroup
-    * nnoremap
+  	+ ~/.vimrc or ~/.config/nvim/init.vim
+      * mapleader
+      * autocmd/augroup
+      * nnoremap
   - 编写插件
     + vimscript
     <!--
