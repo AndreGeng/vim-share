@@ -1,0 +1,26 @@
+{
+  "name": "vim-share",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreGeng/vim-share.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndreGeng/vim-share/issues"
+  },
+  "homepage": "https://github.com/AndreGeng/vim-share#readme",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^0.12.1"
+  }
+}
