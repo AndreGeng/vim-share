@@ -1,10 +1,11 @@
 # 目录
   - vim简介与现状
   - 为什么选择vim
-  - 基础
-    + 编辑窗口简介
+  - 入坑
+    + 基础功能
     + 模式编辑
   - dot与宏
+  - 配置简介
   - 插件简介
   - 结语
 
@@ -23,6 +24,7 @@
       * 社区驱动，现代化协作机制
       * 去除旧系统支持
       * 新的插件机制
+
 <!--
   1. Vim vs Emacs
   讨论vim/emacs就像讨论宗教，每个人都用不同的信仰
@@ -57,17 +59,26 @@ cons:
 
 ---
 
-# 安装
+## 基础功能
+#### 安装
 ```
   brew install neovim
   or
   brew install vim --with-override-system-vi
 
 ```
+
+#### GUI vs Commandline
+```
+// GUI interface
+macvim/gvim
+// commandline interface
+vim/nvim
+```
   
 ---
 
-## 编辑窗口简介
+#### 编辑窗口简介
   - buffer
   - window
   - tab
@@ -81,8 +92,7 @@ cons:
 
 ---
 
-## 模式编辑
-  - insert mode
+#### 模式编辑
   - normal mode
   - visual mode
   - cmdline mode
@@ -90,10 +100,11 @@ cons:
     + /？搜索
     + !过滤
   - terminal mode
-  - ex mode
+  - ~~ex mode~~
     + Q进入，visual退出
     + 一般用来做批处理
-  - select mode
+  - ~~insert mode~~
+  - ~~select mode~~
     + 鼠标
 
 <!--
@@ -104,7 +115,7 @@ cons:
 
 ---
 
-## normal mode
+##### normal mode
   - 移动光标
     + h,j,k,l
     + 行首0, 行尾$
@@ -144,6 +155,7 @@ cons:
       + e: 整个文件
       + e.g.
         onoremap in( :\<c-u\>normal! f(vi(\<cr\>
+
 <!--
   Note:
   重复的操作符表示对当前行操作，dd/cc/yy
@@ -151,12 +163,13 @@ cons:
 
   ---
 
-# visual mode
+#### visual mode
   - 区别: 先选中再通过operator操作，选中文本
   - 三种可视模式
     + v: 面向字符的可视模式
     + V: 面向行的可视模式
     + \<C-v\>: 面向列的可视模式
+
 <!--
   Note:
   o: 切换选区的活动端
@@ -166,7 +179,7 @@ cons:
 
   ---
 
-# cmdline mode 
+#### cmdline mode 
   - ex命令
     + :q/:q!/:w/:wa
     + 快捷键
@@ -200,7 +213,7 @@ cons:
 
   ---
 
-# terminal mode
+#### terminal mode
   - :terminal
   - go to normal mode
     + \<c-\\>\<c-n\>
@@ -231,6 +244,13 @@ cons:
   系统剪贴版 +
   表达式寄存器
 -->
+
+---
+
+#  配置简介
+ - 初学者建议先照搬他人的vimrc配置
+ - 配置自己的vimrc
+  + 不要往vimrc里写你不了解的配置
 
 ---
 
