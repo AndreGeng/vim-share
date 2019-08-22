@@ -14,8 +14,6 @@
 # vim简介与现状
   - 目前最流行的文本编辑器之一
   - **Vi IM**proved by Bram Moolenaar
-  - Vim vs Emacs
-    > Vim: 编辑器神; Emacs: 神的编辑器
   - 现状
     + vim 8.X（8.0发布于2016年9月, 2019.08最新版为8.1.x）
       * 异步I/O
@@ -52,6 +50,9 @@ pros:
 cons:
   - 学习曲线较陡
   - 配置化复杂
+
+Vim vs Emacs
+  > Vim: 编辑器神; Emacs: 神的编辑器
 
 <!-- 
 由于可定制化较高，导致配置化较为复杂。它并不是像sublime/atom/vscode这些IDE工具，提供"开箱即用"的功能
